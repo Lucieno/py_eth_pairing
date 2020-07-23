@@ -100,7 +100,6 @@ fn pairing2(pts: Vec<u128>) -> bool {
     }
 
     let eip_result = EIP196Executor::pair(&input).unwrap();
-    println!("{:?}", eip_result);
     return eip_result[31] != 0;
     // let mut output = vec![0 as u128; 2];
     // let count = 0;

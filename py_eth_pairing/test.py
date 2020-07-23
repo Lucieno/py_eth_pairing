@@ -57,32 +57,29 @@ expected = add(G1, G1)
 assert actual == expected
 
 print("mul")
-sc = 1234
-t0 = time()
+sc = curve_order - 10
 g1_pk = multiply(G1, sc)
+t0 = time()
 actual = curve_mul(g1_pk, sc)
 print(time() - t0)
 expected = multiply(g1_pk, sc)
 assert actual == expected
 
 print("pairing: expect true")
-sc = 1234
+sc = 123
 g1_pk = multiply(G1, sc)
 g2_pk = multiply(G2, sc)
 t0 = time()
-# print(curve_negate(G1))
-# ng1 = multiply(G1, (curve_order - 1))
-# c_ng1 = curve_mul(G1, (curve_order - 1))
-# print("ng1", ng1)
-# print("c_ng1", c_ng1)
-# print("negate", curve_negate(G1))
-print(pairing2(G1, G2, curve_negate(G1), G2))
+actual = pairing2(curve_negate(g1_pk), G2, G1, g2_pk)
 print(time() - t0)
-# print(pairing(G2, G1) == pairing(G2, G1))
+expected = True
+assert actual == expected
 
 print("pairing: expect false")
 g1_pk = multiply(G1, 123)
 g2_pk = multiply(G2, 1234)
 t0 = time()
-print(pairing2(g1_pk, G2, G1, g2_pk))
+actual = pairing2(curve_negate(g1_pk), G2, G1, g2_pk)
 print(time() - t0)
+expected = False
+assert actual == expected
