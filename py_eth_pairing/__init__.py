@@ -46,11 +46,3 @@ def pairing2(g1_1, g2_1, g1_2, g2_2):
   c = eth_pairing_py.pairing2(lst_input)
   # c = lst_to_int(lst_c)
   return c
-
-
-__all__ = [
-    "search_py",
-    "search",
-    "search_sequential",
-    "search_sequential_allow_threads",
-]
