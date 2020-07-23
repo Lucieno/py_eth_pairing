@@ -6,7 +6,7 @@ pip install py_eth_pairing
 ## How to Use
 Please check `test.py` as examples
 
-```
+```python
 from py_eth_pairing import curve_add, curve_mul, pairing2, curve_negate
 from py_ecc.bn128 import G1, G2
 
