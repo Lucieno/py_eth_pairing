@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py-eth-pairing", # Replace with your own username
-    version="0.1.1",
+    version="0.1.2",
     author="Lucien",
     author_email="lokm13@gmail.com",
     description="Use Ethereum precompiled pairing operations (BN128, specified in EIP196) in Python",
