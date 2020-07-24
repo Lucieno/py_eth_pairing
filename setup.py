@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py-eth-pairing", # Replace with your own username
-    version="0.1.2",
+    version="0.1.3",
     author="Lucien",
     author_email="lokm13@gmail.com",
     description="Use Ethereum precompiled pairing operations (BN128, specified in EIP196) in Python",
@@ -14,12 +14,12 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     rust_extensions=[RustExtension("py_eth_pairing.eth_pairing_py", binding=Binding.PyO3)],
     url="https://github.com/Lucieno/py_eth_pairing",
-    # packages=setuptools.find_packages(),
-    packages=["py_eth_pairing"],
+    packages=setuptools.find_packages(),
+    # packages=["py_eth_pairing"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    # python_requires='>=3.6',
+    python_requires='>=3.6',
 )
