@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Lucieno/py_eth_pairing.svg?branch=master)](https://travis-ci.com/Lucieno/py_eth_pairing)
+
 ## How to Install
 ```
 pip install py_eth_pairing
