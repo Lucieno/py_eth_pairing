@@ -3,8 +3,25 @@
 pip install py_eth_pairing
 ```
 
+## How to Build from Source
+
+- Install [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) for Rust
+```
+curl https://sh.rustup.rs -sSf | sh
+```
+
+- Install Maturin
+```
+pip install Maturin
+```
+
+- Compile it
+```
+maturin develop --release
+```
+
 ## How to Use
-Please check `test.py` as examples
+Please check `test.py` as an example
 
 ```python
 from py_eth_pairing import curve_add, curve_mul, pairing2, curve_negate
