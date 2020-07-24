@@ -4,4 +4,5 @@ if [ ! -d ~/rust-installer ]; then
     sh ~/rust-installer/rustup.sh -y
     source $HOME/.cargo/env
     rustup default nightly
+    python --version
 fi
