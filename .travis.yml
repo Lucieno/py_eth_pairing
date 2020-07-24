@@ -1,25 +1,23 @@
 language: python
 python:
   - "3.6"      # current default Python on Travis CI
-  - "3.7"
-
 
 matrix:
   include:
+    # - sudo: required
+    #   services:
+    #     - docker
+    #   env:
+    #     - CIBW_SKIP=*manylinux1_i686*
+    #     - PIP=pip
+    #     - PYTHON=python
     - sudo: required
       services:
         - docker
       env:
-        - CIBW_SKIP=*manylinux1_i686*
-        - PIP=pip
-        - PYTHON=python
-    - sudo: required
-      services:
-        - docker
-      env:
-        - CIBW_SKIP=*manylinux1_x86_64*
-        - PIP=pip
-        - PYTHON=python
+        # - CIBW_SKIP=*manylinux1_x86_64*
+        - PIP=pip3
+        - PYTHON=python3
     - os: osx
       language: generic
       env:
