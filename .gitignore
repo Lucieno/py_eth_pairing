@@ -2,3 +2,5 @@
 Cargo.lock
 __pycache__/
 *.pyc
+build/
+dist/
