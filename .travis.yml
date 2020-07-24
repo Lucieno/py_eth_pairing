@@ -14,15 +14,15 @@ matrix:
     - sudo: required
       services:
         - docker
-      env:
-        # - CIBW_SKIP=*manylinux1_x86_64*
-        - PIP=pip3
-        - PYTHON=python3
+      # env:
+      #   - CIBW_SKIP=*manylinux1_x86_64*
+      #   - PIP=pip3
+      #   - PYTHON=python3
     - os: osx
       language: generic
-      env:
-        - PIP=pip3
-        - PYTHON=python3
+      # env:
+      #   - PIP=pip3
+      #   - PYTHON=python3
 
 env:
   global:
@@ -31,7 +31,7 @@ env:
 
 script:
   - $PIP install cibuildwheel setuptools_rust
-  - export CIBW_BEFORE_BUILD='$PIP install setuptools-rust && source {project}/ci/install_rust.sh'
+  - export CIBW_BEFORE_BUILD='pip install setuptools-rust && source {project}/ci/install_rust.sh'
   - export CIBW_SKIP=cp34-*\ $CIBW_SKIP
   - export CIBW_ENVIRONMENT='PATH="$HOME/rust/bin:$PATH"'
   - cibuildwheel --output-dir wheelhouse
