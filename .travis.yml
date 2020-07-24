@@ -1,4 +1,8 @@
 language: python
+python:
+  - "3.6"      # current default Python on Travis CI
+  - "3.7"
+
 
 matrix:
   include:
@@ -19,8 +23,8 @@ matrix:
     - os: osx
       language: generic
       env:
-        - PIP=pip2
-        - PYTHON=python2
+        - PIP=pip3
+        - PYTHON=python3
 
 env:
   global:
