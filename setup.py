@@ -1,4 +1,5 @@
 import setuptools
+from setuptools_rust import Binding, RustExtension
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -11,6 +12,7 @@ setuptools.setup(
     description="Use Ethereum precompiled pairing operations (BN128, specified in EIP196) in Python",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    rust_extensions=[RustExtension("py_eth_pairing.eth_pairing_py", binding=Binding.PyO3)],
     url="https://github.com/Lucieno/py_eth_pairing",
     # packages=setuptools.find_packages(),
     packages=["py_eth_pairing"],

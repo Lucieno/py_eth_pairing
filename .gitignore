@@ -1,7 +1,10 @@
-/target
-Cargo.lock
-__pycache__/
+*.so
 *.pyc
+
+target/
+__pycache__/
 build/
 dist/
+
+Cargo.lock
 py_eth_pairing.egg-info
