@@ -1,4 +1,4 @@
-import eth_pairing_py
+from . import eth_pairing_py
 # from py_ecc.bn128 import G1, G2, add, multiply, curve_order, pairing
 
 bar = (2**128)

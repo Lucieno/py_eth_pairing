@@ -18,5 +18,5 @@ features = ["extension-module"]
 name = "eth_pairing_py"
 crate-type = ["cdylib"]
 
-[build-system]
-requires = ["setuptools", "wheel", "setuptools-rust"]
+# [build-system]
+# requires = ["setuptools", "wheel", "setuptools-rust"]
